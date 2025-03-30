@@ -3,8 +3,6 @@ import {
     Sheet,
     SheetContent,
     SheetClose,
-    SheetDescription,
-    SheetHeader,
     SheetTitle,
     SheetTrigger,
   } from "@/components/ui/sheet"
@@ -13,6 +11,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Footer from "./Footer";
   
 
 const MobileNav = ({
@@ -75,7 +74,7 @@ const MobileNav = ({
                     </nav>
                 </SheetClose>
 
-                {/* <Footer user={user} type="mobile" /> */}
+                <Footer user={user} type="mobile" />
             </div>
         </SheetContent>
         </Sheet>
