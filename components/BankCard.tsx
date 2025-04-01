@@ -2,12 +2,14 @@ import { formatAmount } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import Copy from './Copy'
 
 const BankCard = ({
     account,
     userName,
-    showBalance
+    showBalance = true
 }: CreditCardProps) => {
+
   return (
     <div className="flex flex-col">
       <Link href={`/transaction-history/?id=${account.appwriteItemId}`} className="bank-card">
@@ -61,7 +63,7 @@ const BankCard = ({
         />
       </Link>
 
-      {/* {showBalance && <Copy title={account?.shareableId} />} */}
+      {showBalance && <Copy title={account?.shareableId} />}
     </div>
   )
 }
